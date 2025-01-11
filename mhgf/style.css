@@ -1,0 +1,216 @@
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* 为链接添加样式 */
+a {
+    text-decoration: none;
+    color: inherit; /* 确保链接文字的颜色继承父元素的颜色 */
+}
+
+/* Container */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Header Section */
+header {
+    background-color: #ADD8E6; /* 浅蓝色 */
+    color: #fff;
+    padding: 20px 0;
+}
+
+header h1 {
+    text-align: center;
+    font-size: 2.5rem;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+nav ul li a:hover {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+/* About Section */
+#about {
+    background-color: #fff;
+    padding: 40px 0;
+    text-align: center;
+}
+
+#about p {
+    font-size: 1.1rem;
+    color: #666;
+}
+
+/* Team Members Section */
+#members {
+    background-color: #f9f9f9;
+    padding: 40px 0;
+}
+
+#members .members {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap; /* 支持响应式布局 */
+}
+
+#members .member {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 30%;
+    margin-bottom: 20px; /* 给每个成员间增加间距 */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* 过渡效果 */
+}
+
+#members .member:hover {
+    transform: scale(1.05); /* 鼠标悬停时放大 */
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15); /* 鼠标悬停时阴影效果 */
+}
+
+#members .member img {
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+
+#members .member h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+#members .member p {
+    font-size: 1rem;
+    color: #777;
+}
+
+/* Works Section */
+#works {
+    background-color: #fff;
+    padding: 40px 0;
+}
+
+#works .projects {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+#works .project {
+    width: 30%;
+    background-color: #f4f4f4;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px; /* 增加底部间距 */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* 过渡效果 */
+}
+
+#works .project:hover {
+    transform: scale(1.05); /* 鼠标悬停时放大 */
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15); /* 鼠标悬停时阴影效果 */
+}
+
+#works .project img {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+#works .project h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+#works .project p {
+    font-size: 1rem;
+    color: #777;
+}
+
+/* Footer Section */
+footer {
+    background-color: #ADD8E6; /* 浅蓝色 */
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+    }
+
+    nav ul {
+        flex-direction: column;
+        padding-top: 10px;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    #members .members {
+        justify-content: center;
+    }
+
+    #members .member {
+        width: 80%; /* 手机端每个成员占宽度的80% */
+        margin: 10px 0;
+    }
+
+    #works .project {
+        width: 80%; /* 手机端每个作品占宽度的80% */
+        margin: 10px 0;
+    }
+
+    footer p {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    nav ul li a {
+        font-size: 1rem;
+    }
+
+    #members .member {
+        width: 100%; /* 手机端每个成员占宽度的100% */
+    }
+
+    #works .project {
+        width: 100%; /* 手机端每个作品占宽度的100% */
+    }
+}
